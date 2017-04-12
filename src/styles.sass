@@ -1,11 +1,76 @@
-$color: firebrick
+*
+  margin: 0
+  padding: 0
+
+$color1: #61DAFB
+$color2: #b5d4f4
+$color3: #5499dd
+$color4: #495056
+$color5: #8AA2C4
+$color6: #D3E8FD
 body
-  background-color: #fff
+  background-color: white
 
 .mainBlock
+  margin: 10px
   .Static
-    background-color: lightblue
+    padding: 15px 0 20px 20px
+    background-color: $color3
+    .openForm
+      color: $color6
+      &:hover
+        cursor: pointer
+        color: $color2
+    .sumInTop
+      position: relative
+      font-weight: bold
+      margin-top: 10px
+      .multiplier
+        display: inline-block
+        padding-right: 10px
+        &:hover > .hidden
+          opacity: 1
+          height: auto
+        .mult
+          color: $color2
+          font-weight: bold
   .Dynamic
-    background-color: lightgreen
-    .formBlock
-      display: block
+    padding: 15px 0 20px 20px
+    background-color: $color4
+    color: white
+    .form
+      .textForms
+        max-height: 150px
+        width: 800px
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        .inputs
+          flex: 1 1 100px
+          max-width: 100px
+          .formBlock
+            border: none
+            display: block
+            margin: 5px 0 5px 0
+            padding: 5px
+            .result
+              margin: 5px 0 5px 0
+              display: block
+    .buttonResult
+      background-color: $color3
+      border: 2px solid black
+      margin-top: 10px
+      font-size: 14px
+      padding: 5px
+.hidden
+  position: absolute
+  opacity: 0
+  background-color: rgba($color6, .7)
+  border: 1px solid rgba($color6, .7)
+  border-radius: 5px
+  color: $color4
+  padding: 10px
+  transition: opacity 2s
+  transition-delay: 1s
+
+
